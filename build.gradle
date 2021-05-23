@@ -1,16 +1,20 @@
 plugins {
     id 'java'
+    id "org.jetbrains.kotlin.jvm" version "1.5.0"
 }
 
 group 'org.start2do'
 version '1.0-SNAPSHOT'
-
+def version = '2.22.3.Final'
 repositories {
     mavenCentral()
 }
 
 dependencies {
-
+    implementation group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib'
+    implementation group: 'org.jetbrains.kotlin', name: 'kotlin-compiler'
+    implementation group: 'org.jboss.forge.roaster', name: 'roaster-jdt', version: version
+    implementation group: 'org.jboss.forge.roaster', name: 'roaster-api', version: version
 }
 
 test {
